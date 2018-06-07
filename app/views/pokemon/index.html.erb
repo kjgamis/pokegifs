@@ -3,16 +3,19 @@
 
   <div class="text">
     <h2 class="name"><%= @pokemon_name %></h2>
-    <h5>
-      <span class="key">Type: </span>
-      <% @pokemon_type.each do |type| %>
-        <%= type  %>
-      <% end %>
-    </h5>
+    <ul>
+      <li>
+        <span class="key">Type: </span>
+        <% @pokemon_type.each do |type| %>
+          <%= type  %>
+        <% end %>
+      </li>
 
-    <h5><span class="key">Height: </span><%= @pokemon_height %></h5>
-    <h5><span class="key">Weight: </span><%= @pokemon_weight %></h5>
-    <h5><span class="key">Candy: </span><%= @pokemon_candy %></h5>
-    <h5><span class="key">Spawn Chance: </span><%= @pokemon_spawn_chance %></h5>
+      <li><span class="key">Height: </span><%= @pokemon_height %></li>
+      <li><span class="key">Weight: </span><%= @pokemon_weight %></li>
+      <li><span class="key">Candy: </span><%= @pokemon_candy %></li>
+      <li><span class="key">Spawn Chance: </span><%= @pokemon_spawn_chance %></li>
+    </ul>
+
   </div>
 </div>

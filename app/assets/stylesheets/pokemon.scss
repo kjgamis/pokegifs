@@ -9,18 +9,36 @@ h1, h2, h3, h4, h5, h6 {
 .single {
   padding: 2em;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 60% 40%;
 
-  .name {
-    margin: 0 30%;
-    text-align: center;
-    border-bottom: 2px solid black;
+  .image {
+    margin: 0 2.5em;
+
+    img {
+      width: 100%;
+    }
   }
 
-  span {
-    font-weight: 700;
+  .text {
+
+    .name {
+      margin: 0 30%;
+      text-align: center;
+      border-bottom: 2px solid black;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 2em;
+    }
+
+    li {
+      list-style: none;
+      margin: 0.75em 0;
+    }
   }
-  li {
-    list-style: none;
-  }
+
 }
