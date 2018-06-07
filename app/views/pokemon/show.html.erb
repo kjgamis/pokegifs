@@ -17,6 +17,15 @@
       <li><span class="key">Weight: </span><%= @pokemon_weight %></li>
       <li><span class="key">Candy: </span><%= @pokemon_candy %></li>
       <li><span class="key">Spawn Chance: </span><%= @pokemon_spawn_chance %></li>
+      <li><span class="key">Average Spawns: </span><%= @pokemon_avg_spawns %></li>
+      <li><span class="key">Spawn Time: </span><%= @pokemon_spawn_time %></li>
+      <li><span class="key">Multipliers: </span><%= @pokemon_multipliers %></li>
+      <li>
+        <span class="key">Weaknesses: </span>
+        <% @pokemon_weaknesses.each do |x| %>
+          <%= x %><br/>
+        <% end %>
+      </li>
     </ul>
 
   </div>
