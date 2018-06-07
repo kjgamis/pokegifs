@@ -15,9 +15,24 @@
  */
 
 html {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.logo {
+  font-size: 2.5em;
+  margin: 1em 2em;
+}
+
+form {
+
+  align-self: center;
 }
