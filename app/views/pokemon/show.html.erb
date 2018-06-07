@@ -1,5 +1,21 @@
-<h1>Single Pokemon</h1>
-ID: <%= @pokemon_id %><br/>
-Name: <%= @pokemon_name %><br/>
-Type: <%= @pokemon_type %><br/>
-<%= image_tag(@pokemon_gif) %>
+<div class="single">
+  <%= image_tag(@pokemon_gif) %>
+
+  <div class="text">
+    <h2><%= @pokemon_name %></h2>
+    <h5>
+      <span class="key">Type: </span>
+      <% @pokemon_type.each do |type| %>
+        <%= type  %>
+      <% end %>
+    </h5>
+
+    <h5><span class="key">Height: </span><%= @pokemon_height %></h5>
+    <span class="key">Weight: </span>
+    <h5><%= @pokemon_weight %></h5>
+    <span class="key">Candy: </span>
+    <h5><%= @pokemon_candy %></h5>
+    <span class="key">Spawn Chance</span>
+    <h5><%= @pokemon_spawn_chance %></h5>
+  </div>
+</div>

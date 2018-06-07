@@ -6,11 +6,13 @@ class PokemonController < ApplicationController
     pokemon_response = HTTParty.get("https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json")
     pokemon_body = JSON.parse(pokemon_response.body)
 
-    @pokemon = pokemon_body["pokemon"]
-
-    @pokemon_id   = pokemon_body["pokemon"][0]["id"]
-    @pokemon_name = pokemon_body["pokemon"][0]["name"]
-    @pokemon_type = pokemon_body["pokemon"][0]["type"]
+    @pokemon_id     = pokemon_body["pokemon"][0]["id"]
+    @pokemon_name   = pokemon_body["pokemon"][0]["name"]
+    @pokemon_type   = pokemon_body["pokemon"][0]["type"]
+    @pokemon_height = pokemon_body["pokemon"][0]["height"]
+    @pokemon_weight = pokemon_body["pokemon"][0]["weight"]
+    @pokemon_candy  = pokemon_body["pokemon"][0]["candy"]
+    @pokemon_spawn_chance = pokemon_body["pokemon"][0]["spawn_chance"]
 
 
     gif_response = HTTParty.get("https://api.giphy.com/v1/gifs/search?api_key=#{key}&q=#{@pokemon_name}&rating=g")
