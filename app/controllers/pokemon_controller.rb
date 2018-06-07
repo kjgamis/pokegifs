@@ -47,11 +47,19 @@ class PokemonController < ApplicationController
         @pokemon_id   = pokemon["id"]
         @pokemon_name = pokemon["name"]
         @pokemon_type = pokemon["type"]
+        @pokemon_height = pokemon_body["pokemon"][0]["height"]
+        @pokemon_weight = pokemon_body["pokemon"][0]["weight"]
+        @pokemon_candy  = pokemon_body["pokemon"][0]["candy"]
+        @pokemon_spawn_chance = pokemon_body["pokemon"][0]["spawn_chance"]
       elsif input.to_i == 0
         if input.capitalize == pokemon["name"]
           @pokemon_id   = pokemon["id"]
           @pokemon_name = pokemon["name"]
           @pokemon_type = pokemon["type"]
+          @pokemon_height = pokemon_body["pokemon"][0]["height"]
+          @pokemon_weight = pokemon_body["pokemon"][0]["weight"]
+          @pokemon_candy  = pokemon_body["pokemon"][0]["candy"]
+          @pokemon_spawn_chance = pokemon_body["pokemon"][0]["spawn_chance"]
         end
       end
     end
