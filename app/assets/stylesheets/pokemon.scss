@@ -1,3 +1,26 @@
 // Place all the styles related to the pokemon controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200;
+}
+
+.single {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  .name {
+    margin: 0 30%;
+    text-align: center;
+    border-bottom: 2px solid black;
+  }
+
+  span {
+    font-weight: 700;
+  }
+  li {
+    list-style: none;
+  }
+}
