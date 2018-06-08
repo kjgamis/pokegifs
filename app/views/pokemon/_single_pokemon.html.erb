@@ -1,0 +1,30 @@
+<div class="image">
+  <%= image_tag(@pokemon_gif) %>
+</div>
+
+<div class="text">
+  <h2 class="name"><%= @pokemon_name %></h2>
+  <ul>
+    <li>
+      <span class="key">Type: </span>
+      <% @pokemon_type.each do |type| %>
+        <%= type  %>
+      <% end %>
+    </li>
+
+    <li><span class="key">Height: </span><%= @pokemon_height %></li>
+    <li><span class="key">Weight: </span><%= @pokemon_weight %></li>
+    <li><span class="key">Candy: </span><%= @pokemon_candy %></li>
+    <li><span class="key">Spawn Chance: </span><%= @pokemon_spawn_chance %></li>
+    <li><span class="key">Average Spawns: </span><%= @pokemon_avg_spawns %></li>
+    <li><span class="key">Spawn Time: </span><%= @pokemon_spawn_time %></li>
+    <li><span class="key">Multipliers: </span><%= @pokemon_multipliers %></li>
+    <li>
+      <span class="key">Weaknesses: </span>
+      <% @pokemon_weaknesses.each do |x| %>
+        <%= x %><br/>
+      <% end %>
+    </li>
+  </ul>
+
+</div>
