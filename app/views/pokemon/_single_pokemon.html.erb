@@ -21,9 +21,11 @@
     <li><span class="key">Multipliers: </span><%= @pokemon_multipliers %></li>
     <li>
       <span class="key">Weaknesses: </span>
-      <% @pokemon_weaknesses.each do |x| %>
-        <%= x %><br/>
-      <% end %>
+      <ul>
+        <% @pokemon_weaknesses.each do |weakness| %>
+          <li><%= weakness %></li>
+        <% end %>
+      </ul>
     </li>
   </ul>
 
