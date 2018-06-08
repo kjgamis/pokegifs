@@ -24,17 +24,6 @@ class PokemonController < ApplicationController
 
     @pokemon_gif = gif_body["data"][0]["images"]["original"]["url"]
 
-    respond_to do |format|
-      format.html { render :index }
-
-      format.json { render json: {
-        id:    @pokemon_id,
-        name:  @pokemon_name,
-        type:  @pokemon_type,
-        gif:   @pokemon_gif
-      } }
-    end
-
   end
 
   def show
@@ -87,10 +76,19 @@ class PokemonController < ApplicationController
       format.html { render :show }
       format.json {
         render json: {
-          id:   @pokemon_id,
-          name: @pokemon_name,
-          type: @pokemon_type,
-          gif:  @pokemon_gif }
+          id:           @pokemon_id,
+          name:         @pokemon_name,
+          type:         @pokemon_type,
+          height:       @pokemon_height,
+          weight:       @pokemon_weight,
+          candy:        @pokemon_candy,
+          spawn_chance: @pokemon_spawn_chance,
+          avg_spawns:   @pokemon_avg_spawns,
+          spawn_time:   @pokemon_spawn_time,
+          multipliers:  @pokemon_multipliers,
+          weaknesses:   @pokemon_weaknesses,          
+          gif:          @pokemon_gif
+           }
       }
     end
 
