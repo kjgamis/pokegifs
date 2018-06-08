@@ -32,6 +32,11 @@ nav {
   margin: 1em 2em;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 form {
 
   align-self: center;
