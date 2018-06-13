@@ -24,7 +24,7 @@ body {
 
 nav {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 70% 30%;
 }
 
 .logo {
@@ -38,6 +38,7 @@ a {
 }
 
 form {
-
   align-self: center;
+  justify-self: right;
+  margin: 3em;
 }
