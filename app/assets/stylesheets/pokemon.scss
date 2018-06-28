@@ -6,37 +6,70 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
 }
 
+form {
+  align-self: center;
+  justify-self: right;
+  margin: 0 5em;
+  padding: 0;
+
+  input {
+    border: none;
+    font-size: 1em;
+    padding: 0.5em;
+  }
+  #query {
+    background: #444;
+    color: #FFF;
+  }
+  .submit {
+    background: #ccc;
+  }
+  .submit:hover {
+    cursor: pointer;
+  }
+}
+
 .single {
-  padding: 2em;
+  padding: 1em 2em;
   display: grid;
   grid-template-columns: 60% 40%;
 
   .image {
-    margin: 0 2.5em;
+    margin: 0 1em;
 
     img {
+      border: 2px solid #555;
+      border-radius: 10px;
       width: 100%;
     }
   }
 
   .text {
-    padding: 2em 0;
+    background: #E3E3E3;
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 0.5em 0;
 
     .name {
-      margin: 0 30%;
+      font-size: 3em;
+      font-weight: 200;
+      margin: 0;
+      padding: 0.2em;
       text-align: center;
-      border-bottom: 2px solid black;
+      // border-bottom: 2px solid black;
     }
 
     span {
+      color: #555;
       font-weight: 700;
     }
 
     ul {
-      margin: 2em;
+      margin: 0 2em;
     }
 
     li {
+      color: #777;
       list-style: none;
       margin: 0.75em 0;
     }
