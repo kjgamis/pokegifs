@@ -62,6 +62,9 @@ class PokemonController < ApplicationController
           @pokemon_multipliers  = pokemon["multipliers"]
           @pokemon_weaknesses   = pokemon["weaknesses"]
         end
+      else
+        flash.now[:alert] = ['Cannot find Pokemon. Try again.']
+        render :new
       end
     end
 
@@ -86,12 +89,18 @@ class PokemonController < ApplicationController
           avg_spawns:   @pokemon_avg_spawns,
           spawn_time:   @pokemon_spawn_time,
           multipliers:  @pokemon_multipliers,
-          weaknesses:   @pokemon_weaknesses,          
+          weaknesses:   @pokemon_weaknesses,
           gif:          @pokemon_gif
            }
       }
     end
 
+  end
+
+  private
+
+  def pokemon_params
+    params.require(:pokemon).permit(:id, :name)
   end
 
 end
